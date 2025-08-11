@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <p>Calculator</p>
+  <button onclick="
+ output+= '1';
+ console.log(output)">1</button>
+  <button onclick="
+  output+= '2';
+  console.log(output)">2</button>
+  <button onclick="
+  output+= '3';
+  console.log(output)">3</button>
+  <button onclick="
+    output+= ' + ';
+ console.log(output)">+</button> <br>
+  <button onclick="
+  output+= '4';
+  console.log(output)">4</button>
+  <button onclick="
+  output+= '5';
+  console.log(output)">5</button>
+  <button onclick="
+  output+= '6';
+  console.log(output)">6</button>
+  <button onclick="
+  output+= ' - ';
+  console.log(output)">-</button> <br>
+  <button onclick="
+  output+= '7';
+  console.log(output)">7</button>
+  <button onclick="
+  output+= '8';
+  console.log(output)">8</button>
+  <button onclick="
+  output+= '9';
+  console.log(output)">9</button>
+  <button onclick="
+  output+= ' * '
+  console.log(output)">*</button> <br>
+  <button onclick="
+  output+= '0';
+  console.log(output)">0</button>
+  <button onclick="
+  output+= ' . '
+  console.log(output)">.</button>
+  <button onclick="
+  output = eval(output);
+  console.log(output)">=</button>
+  <button onclick="
+  output+= ' / '
+  console.log(output)">/</button> <br>
+  <button onclick="
+  output= '';
+  console.log('Cleared.')">Clear</button>
+  <script>
+    let output = ' ';
+  </script>
+</body>
+</html>
