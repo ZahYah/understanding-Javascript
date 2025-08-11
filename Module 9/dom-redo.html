@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>YouTube Subscribe Button</p>
+      <button onclick="subscribe()" class="js-subscribe">Subscribe</button>
+    </div>
+
+    <div>
+      <p>Rock Paper Scissors</p>
+      <a href="./dom-rps-redo.html">Click here</a>
+    </div>
+
+    <div>
+      <p>Amazon Shipping Calculator</p>
+      <p>Orders under $40 = +$10 shipping.</p>
+      <p>Orders over $40 = FREE shipping.</p>
+      <input
+        type="text"
+        placeholder="Cost of order"
+        onkeydown="updateScore(event)"
+        class="js-cost-input"
+      />
+      <button onclick="calculateCost()">Calculate</button>
+      <p class="js-cost-result"></p>
+    </div>
+
+    <script>
+      function subscribe() {
+        const SubscribeBtn = document.querySelector(".js-subscribe");
+        if (SubscribeBtn.innerText === "Subscribe") {
+          SubscribeBtn.innerHTML = "Subscribed";
+        } else {
+          SubscribeBtn.innerHTML = "Subscribe";
+        }
+      }
+      function calculateCost() {
+        const costInput = document.querySelector(".js-cost-input");
+        let cost = Number(costInput.value);
+        if (cost < 40) {
+          cost += 10;
+        } else {
+          cost;
+        }
+        return (document.querySelector(
+          ".js-cost-result"
+        ).innerHTML = `$${cost}`);
+      }
+
+      function updateScore(event) {
+        if ((event.key = "Enter")) {
+          calculateCost();
+        }
+      }
+    </script>
+  </body>
+</html>
