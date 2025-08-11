@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .cart-btn{
+    background-color: rgb(255, 216, 20);
+    border: none;
+    padding: 8px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    }
+    .request-btn{
+      border: none;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .schedule-btn{
+      padding: 10px 15px;
+      color: black;
+      font-weight: bold;
+      border-radius: 3px;
+      border: none;
+      background-color: rgb(230, 230, 230);
+      cursor: pointer;
+    }
+    .toggle{
+      background-color: white;
+      padding: 10px 15px;
+      font-size: 15px;
+      display: block;
+      border: 1px solid gold;
+      color: white;
+      margin-top: 10px;
+    }
+    .on{
+      background-color: white;
+      color: black;
+    }
+    .off{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button class="cart-btn">Add to Cart</button>
+  <button class="request-btn">Request now</button>
+  <button class="schedule-btn">Schedule for later</button>
+  <button class="js-button">Test</button>
+  <button class="toggle on" onclick="toggleEffect()">Gaming</button>
+
+  <button class="toggle on" onclick="toggleEffect()">Tech</button>
+
+  <button class="music on" onclick="toggle()">Music</button>
+
+
+<script>
+
+// const gameBtn = document.querySelector(".toggle");
+// function toggleEffect(){
+//   if(gameBtn.classList.contains("off")){
+//     gameBtn.classList.remove("off")
+//     gameBtn.classList.add("on");
+//   } else if(gameBtn.classList.contains("on")){
+//     gameBtn.classList.remove("on")
+//      gameBtn.classList.add("off")
+//   }
+// }
+const buttons = document.querySelectorAll(".toggle");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("on");
+    btn.classList.toggle("off");
+  });
+});
+
+   const test = document.querySelector(".js-button");
+  const result = test.classList.contains("js-button");
+  console.log(result);
+
+ const musicBtn = document.querySelector(".music");
+ function toggle(){
+musicBtn.classList.toggle("on");
+  musicBtn.classList.toggle("off");
+ }
+  </script>
+</body>
+</html>
